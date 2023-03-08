@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/report_navigation"
+    app:startDestination="@id/listReportsFragment">
+
+    <fragment
+        android:id="@+id/listReportsFragment"
+        android:name="com.fgardila.nativapps.ui.list_report.ListReportsFragment"
+        android:label="Reportes"
+        tools:layout="@layout/fragment_list_reports" >
+        <action
+            android:id="@+id/action_listReportsFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.fgardila.nativapps.ui.create_report.CreateFragment"
+        android:label="Crear Reporte"
+        tools:layout="@layout/fragment_create" >
+        <action
+            android:id="@+id/action_createFragment_to_listReportsFragment"
+            app:destination="@id/listReportsFragment" />
+    </fragment>
+</navigation>
